@@ -1,0 +1,260 @@
+/* The universal selector uses the * character in 
+the same place where you specified the type selector in a ruleset, */
+
+/* To see how the universal selector targets all elements on a 
+page, copy the rule below and paste it on the first line */
+
+/* for class, it would be . */
+/* id would be # */
+
+* { 
+  /* font-family: Verdana; */
+  /* border: 1px solid red; */
+}
+/* to target all href */
+
+/* [href]{
+  color: magenta;
+} */
+
+/* target different img src */
+
+/* img[src*='winter'] {
+  height: 50px;
+}
+ 
+img[src*='summer'] {
+  height: 100px;
+} */
+
+
+/* These are all examples of pseudo-class selectors in action! 
+In fact, :focus, :visited, :disabled, and :active are all pseudo-classes.
+ Factors such as user interaction, site navigation, and position in the 
+ document tree can all give elements a different state with pseudo-class.
+
+A pseudo-class can be attached to any selector. It is always written as
+ a colon : followed by a name. For example p:hover. */
+
+ /* p:hover {
+  background-color: lime;
+} */
+
+/* CSS classes are meant to be reused over many elements. By writing CSS classes,
+ you can style elements in a variety of ways by mixing classes. For instance,
+  imagine a page with two headlines. One headline needs to be bold and blue,
+   and the other needs to be bold and green. Instead of writing separate CSS
+    rules for each headline that repeat each other’s code, it’s better to
+     write a .bold CSS rule, a .green CSS rule, and a .blue CSS rule. 
+Then you can give one headline the bold green classes, and the other the bold blue classes. */
+
+/* Specificity
+Specificity is the order by which the browser decides which CSS styles will be displayed.
+IDs are the most specific selector in CSS, followed by classes, and finally, type. 
+*/
+
+
+/* Chaining
+When writing CSS rules, it’s possible to require an HTML element to have two or more
+ CSS selectors at the same time.
+
+This is done by combining multiple selectors, which we will refer to as chaining.
+ For instance, if there was a special class for <h1> elements, the CSS would look like below:
+
+h1.special {
+ 
+}
+The code above would select only the <h1> elements with a class of special. 
+If a <p> element also had a class of special, the rule in the example would not style the paragraph. */
+
+/* Descendant Combinator
+In addition to chaining selectors to select elements, 
+CSS also supports selecting elements that are nested within
+ other HTML elements, also known as descendants. For instance,
+  consider the following HTML:
+
+<ul class='main-list'>
+  <li> ... </li>
+  <li> ... </li>
+  <li> ... </li>
+</ul>
+The nested <li> elements are descendants of the <ul> 
+element and can be selected with the descendant combinator like so:
+
+.main-list li {
+ 
+} */
+
+/* Multiple Selectors
+In order to make CSS more concise, it’s possible to add CSS
+ styles to multiple CSS selectors all at once. This prevents writing repetitive code.
+ 
+ Instead of below: 
+ h1 {
+  font-family: Georgia;
+}
+ 
+.menu {
+  font-family: Georgia;
+}
+
+Use: 
+
+ h1, 
+.menu {
+  font-family: Georgia;
+} 
+ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 940px; 
+    padding: 0 10px;
+  }
+  
+  .header {
+    background: url(https://content.codecademy.com/projects/innovation-cloud/bg.jpg) no-repeat center center; 
+    background-size: cover;
+    height: 800px;
+    text-align: center; 
+  }
+  
+  .header .container {
+    position: relative;
+    top: 200px;
+  }
+  
+  .header h1 {
+    color: #fff;
+    line-height: 100px; 
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    text-transform: uppercase; 
+  }
+  
+  @media (min-width:850px) {
+    .header h1 {
+      font-size: 120px;
+    }
+  }
+  
+  .header p {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 8px;
+    margin-bottom: 40px;
+    margin-top: 0;
+    text-transform: uppercase; 
+  }
+  
+  .btn {
+    color: #fff;
+    background: #000;
+    padding: 10px 40px;
+    text-decoration: none; 
+    transition: background .5s; 
+  }
+  
+  .nav { 
+    background: #000;
+    height: 80px; 
+    width: 100%;
+  }
+  
+  .nav ul {
+    height: 80px;
+    list-style: none;
+    margin: 0 auto; 
+    padding: 0;
+  }
+  
+  .nav ul li {
+    color: #fff;
+    display: inline-block; 
+    height: 80px;
+    line-height: 80px; 
+    list-style: none;
+    padding: 0 10px;
+    transition: background .5s; 
+  }
+  
+  .btn:hover, .nav ul li:hover {
+    background: #117bff;
+    cursor: pointer; 
+    transition: background .5s;  
+  }
+  
+  .main .container {
+    margin: 80px auto;
+  }
+  
+  .main img {
+    float: left;
+    margin: 50px 80px 50px 0;
+  }
+  
+  .jumbotron {
+    background: url(https://content.codecademy.com/projects/innovation-cloud/jumbotron_bg.jpg) center center;
+    background-size: cover;
+    height: 600px; 
+  }
+  
+  .jumbotron .container {
+    position: relative;
+    top: 220px;
+  }
+  
+  .jumbotron h2 {
+    color: #fff;
+    text-align: right; 
+  }
+  
+  .jumbotron p {
+    color: #fff; 
+    text-align: right; 
+  }
+  
+  .jumbotron .btn {
+    margin: 10px 0 0;
+    float: right; 
+  }
+  
+  .footer { 
+    background: #000;
+    height: 80px; 
+    padding-bottom: 50px;
+  }
+  
+  .footer p { 
+    color: #fff;
+    font-size: 14px;  
+    height: 80px; 
+    line-height: 80px;
+    margin: 0;  
+  }
+  
+  @media (max-width: 500px) {
+    .header h1 {
+      font-size: 50px;
+      line-height: 64px;
+    }
+  
+    .main, .jumbotron {
+      padding: 0 30px;
+    }
+  
+    .main img {
+      width: 100%;
+    }
+  }
